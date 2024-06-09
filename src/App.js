@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import About from './components/About';
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
   <div className="container my-3">
     {/* my-3-->gives margin in y for 3 units */}
   <TextForm heading="Enter the text to analyze"/>
+  <About/>
   </div>
     </>
   );

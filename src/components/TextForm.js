@@ -19,7 +19,16 @@ export default function TextForm(props) {
         // console.log("Uppercase was clicked");
         setText(event.target.value);
     }
+
+    const handleReverseClick = () =>{
+        let newText = text.split("").reverse().join('');
+        setText(newText);
+    }
+   
+
 const [text, setText] = useState("");
+// const [isBold,setisBold] = useState("");
+
 // setText("new Text");
 
 
@@ -30,8 +39,10 @@ const [text, setText] = useState("");
         <div className="mb-3">
         <textarea className="form-control" placeholder="Enter you text" value={text} onChange={handleOnChange}  id="myBox" rows="8"></textarea>
         </div>
-        <button className="btn btn-primary btn-success" onClick={handleUpClick}>Convert to Uppercase</button>
-        <button className="btn btn-primary mx-3 btn-success" onClick={handleDownClick}>Convert to Lowercase</button>
+        <button className="btn btn-primary mx-2 btn-success" onClick={handleUpClick}>Convert to Uppercase</button>
+        <button className="btn btn-primary mx-2 btn-success" onClick={handleDownClick}>Convert to Lowercase</button>
+        <button className="btn btn-primary mx-2 btn-success" onClick={handleReverseClick}>Reverse</button>
+        {/* <button className="btn btn-primary mx-2 btn-success" onClick={handleBoldClick}>Bold</button> */}
     </div>
     <div className="container my-4">
         <h2>Your text summary</h2>
