@@ -49,7 +49,7 @@ const [text, setText] = useState("");
         <p>{text.split(" ").filter(word => word!== "").length} words and {text.length} characters</p>
         <p>{0.008 * text.split(" ").filter(word => word!== "").length} minutes read</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0?text:"Enter text to preview it"}</p>
     </div>
     </>
   )
