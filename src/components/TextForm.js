@@ -2,18 +2,22 @@
 
 //rfc(react component form)
 import React,{useState} from 'react'
-
+// import showAlert from Alert
+// import Alert from './Alert';
 
 export default function TextForm(props) {
     const handleUpClick = ()=>{
         // console.log("Uppercase was clicked");
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to UpperCase","success")
     }
     const handleDownClick = ()=>{
         // console.log("Uppercase was clicked");
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to LowerCase","success")
+
     }
     const handleOnChange = (event)=>{
         // console.log("Uppercase was clicked");
@@ -23,6 +27,8 @@ export default function TextForm(props) {
     const handleReverseClick = () =>{
         let newText = text.split("").reverse().join('');
         setText(newText);
+        props.showAlert("Reversed the text","success")
+
     }
    
 
